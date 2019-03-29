@@ -6,13 +6,12 @@
   "author": "zhaopeng <719197352@qq.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
     "format": "prettier --write \"src/**/*.{js,ts,tsx}\"",
     "lint:fix": "tslint -c tslint.json \"src/**/*.{ts,tsx}\" --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn test",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -33,7 +32,11 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
     "@types/react": "^16.8.10",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
