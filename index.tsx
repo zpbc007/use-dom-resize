@@ -24,7 +24,6 @@ export default function useDomResize<T extends HTMLElement>(ref: React.RefObject
 
     const handleResize = useCallback(() => {
         if (ref.current) {
-            console.log('size change ', getSize(ref.current).height)
             setDomSize(getSize(ref.current))
         }
     }, [ref])
