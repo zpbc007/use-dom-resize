@@ -5,7 +5,9 @@
   "module": "dist/index.es.js",
   "types": "./dist/index.d.ts",
   "repository": "https://github.com/zpbc007/use-dom-resize.git",
-  "keywords": ["react hooks resize Resize Observer "],
+  "keywords": [
+    "react hooks resize Resize Observer "
+  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -16,8 +18,8 @@
     "clean:dist": "rimraf dist/*",
     "min": "terser dist/index.js -o dist/index.min.js",
     "build": "npm run clean:dist && cp ./ResizeObserver.d.ts ./dist && rollup -c && npm run min",
-    "format": "prettier --write \"src/**/*.{js,ts,tsx}\"",
-    "lint:fix": "tslint -c tslint.json \"src/**/*.{ts,tsx}\" --fix"
+    "format": "prettier --write \"*.{js,ts,tsx}\"",
+    "lint:fix": "tslint -c tslint.json \"*.{ts,tsx}\" --fix"
   },
   "husky": {
     "hooks": {
@@ -29,7 +31,7 @@
     "index.tsx": [
       "yarn format",
       "yarn lint:fix",
-      "git add"
+      "git add ."
     ]
   },
   "commitlint": {
@@ -50,6 +52,7 @@
     "prettier": "^1.16.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "resize-observer-polyfill": "^1.5.1",
     "rimraf": "^2.6.3",
     "rollup": "^1.7.4",
     "rollup-plugin-typescript2": "^0.20.1",

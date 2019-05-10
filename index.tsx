@@ -1,4 +1,5 @@
 import React, { useCallback, useLayoutEffect, useState } from 'react'
+import ResizeObserver from 'resize-observer-polyfill'
 
 interface ISize {
     width: number
@@ -35,7 +36,7 @@ export default function useDomResize<T extends HTMLElement>(ref: React.RefObject
 
         handleResize()
 
-        let resizeObserver = new window.ResizeObserver(() => handleResize())
+        let resizeObserver = new ResizeObserver(() => handleResize())
         resizeObserver.observe(ref.current)
 
         return () => {
