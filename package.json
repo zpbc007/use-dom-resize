@@ -1,6 +1,6 @@
 {
   "name": "@hinata_hyuga/use-dom-resize",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "./dist/index.d.ts",
@@ -17,7 +17,7 @@
   "scripts": {
     "clean:dist": "rimraf dist/*",
     "min": "terser dist/index.js -o dist/index.min.js",
-    "build": "npm run clean:dist && cp ./ResizeObserver.d.ts ./dist && rollup -c && npm run min",
+    "build": "npm run clean:dist && rollup -c && npm run min",
     "format": "prettier --write \"*.{js,ts,tsx}\"",
     "lint:fix": "tslint -c tslint.json \"*.{ts,tsx}\" --fix"
   },
